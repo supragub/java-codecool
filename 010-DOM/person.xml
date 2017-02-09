@@ -1,0 +1,20 @@
+<person>
+        <name>
+                <first-name/>
+                <last-name/>
+        </name>
+        <age/>
+        <sex/>
+        <nationality/>
+        <occupation/>
+        <address>
+                <country/>
+                <city/>
+                <county/>
+                <postcode/>
+                <street/>
+                <house-number/>
+                <floor/>
+                <door/>
+        </address>
+</person>
