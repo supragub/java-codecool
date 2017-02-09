@@ -1,1 +1,1 @@
-# java-codecool / 001-FizzBuzz
+# java-codecool / 002-FizzBuzz
