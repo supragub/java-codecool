@@ -1,6 +1,7 @@
 package hu.suprasoft.bolt;
 
-import java.util.Vector;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * @author VarGabor
@@ -11,10 +12,10 @@ public class Bolt {
 	private String nev;
 	private String cim;
 	private String tulajdonos;
-	private Vector<Tej> tejpult;
+	private Hashtable<Tej, Integer> tejpult;
 	private int flag;
 
-	public Bolt(String nev, String cim, String tulajdonos, Vector<Tej> tejpult) {
+	public Bolt(String nev, String cim, String tulajdonos, Hashtable<Tej, Integer> tejpult) {
 		this.nev = nev;
 		this.cim = cim;
 		this.tulajdonos = tulajdonos;
@@ -43,11 +44,22 @@ public class Bolt {
 		return (tejpult.size() > 0);
 	}
 
-	public Tej vasarolTej(Tej m) {
-		return m;
+	public Tej vasarolTej(long vonalKod) {
+		for (Map.Entry<Tej, Integer> tejtermek : tejpult.entrySet()) {
+			if (tejtermek.getKey().getVonalKod() == vonalKod) {
+				tejpult.put(tejtermek.getKey(), tejtermek.getValue() - 1);
+				return tejtermek.getKey();
+			}
+		}
+		return null;
 	}
 
 	public void feltoltTej(Tej m) {
-		tejpult.add(m);
+		if (tejpult.contains(m)) {
+			Integer value = tejpult.get(m);
+			tejpult.put(m, ++value);
+		} else {
+			tejpult.put(m, 1);
+		}
 	}
 }
