@@ -13,7 +13,6 @@ public class Tej {
 	protected String gyarto;
 	protected Date szavatossagiIdo;
 	protected double zsirtartalom;
-	protected long ar;
 	protected long vonalKod;
 
 	public final int LITER = 10;
@@ -22,7 +21,7 @@ public class Tej {
 	public final double ZSIROS = 3.5;
 	public final double FELZSIROS = 2.8;
 
-	public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirtartalom, long ar) {
+	public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirtartalom) {
 
 		this.vonalKod = vonalKod;
 		this.urtartalom = urtartalom;
