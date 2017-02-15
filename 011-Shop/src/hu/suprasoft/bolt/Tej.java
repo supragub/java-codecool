@@ -41,7 +41,7 @@ public class Tej {
 		return szavatossagiIdo;
 	}
 
-	public double getzsirtaltalom() {
+	public double getZsirtaltalom() {
 		return zsirtartalom;
 	}
 
@@ -51,6 +51,7 @@ public class Tej {
 
 	@Override
 	public String toString() {
-		return "";
+		return "Űrtartalom: " + getUrtartalom() + "\nGyártó: " + getGyarto() + "\nSzavatossági idő: "
+				+ getSzavatossagiIdo() + "\nZsírtartalom: " + getZsirtaltalom() + "\nÁr: " + getAr();
 	}
 }
