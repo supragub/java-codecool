@@ -9,7 +9,7 @@ public class Bolt {
 	private String nev;
 	private String cim;
 	private String tulajdonos;
-	private Tej[] tejpult;
+	private Tej[] tejpult = new Tej[0];
 	private int flag;
 
 	public Bolt(String nev, String cim, String tulajdonos, Tej[] tejpult) {
@@ -17,6 +17,12 @@ public class Bolt {
 		this.cim = cim;
 		this.tulajdonos = tulajdonos;
 		this.tejpult = tejpult;
+	}
+
+	public Bolt(String nev, String cim, String tulajdonos) {
+		this.nev = nev;
+		this.cim = cim;
+		this.tulajdonos = tulajdonos;
 	}
 
 	public String getNev() {
@@ -37,5 +43,8 @@ public class Bolt {
 
 	public Tej vasarolTej(Tej m) {
 		return m;
+	}
+
+	public void feltoltTej(Tej m) {
 	}
 }
