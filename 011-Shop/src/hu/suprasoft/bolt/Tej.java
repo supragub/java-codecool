@@ -9,18 +9,18 @@ import java.util.Date;
 
 public class Tej {
 
-	private int urtartalom;
-	private String gyarto;
-	private Date szavatossagiIdo;
-	private double zsirtartalom;
-	private long ar;
-	private long vonalKod;
+	protected int urtartalom;
+	protected String gyarto;
+	protected Date szavatossagiIdo;
+	protected double zsirtartalom;
+	protected long ar;
+	protected long vonalKod;
 
-	private final int LITER = 10;
-	private final int FELLITER = 5;
-	private final int POHAR = 2;
-	private final double ZSIROS = 3.5;
-	private final double FELZSIROS = 2.8;
+	public final int LITER = 10;
+	public final int FELLITER = 5;
+	public final int POHAR = 2;
+	public final double ZSIROS = 3.5;
+	public final double FELZSIROS = 2.8;
 
 	public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirtartalom, long ar) {
 
