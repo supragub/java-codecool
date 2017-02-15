@@ -28,7 +28,6 @@ public class Tej {
 		this.gyarto = gyarto;
 		this.szavatossagiIdo = szavatossagiIdo;
 		this.zsirtartalom = zsirtartalom;
-		this.ar = ar;
 	}
 
 	public long getVonalKod() {
