@@ -5,7 +5,7 @@ package hu.suprasoft.bolt;
  *
  */
 
-public class NemLetezoAruKivetel extends Exception {
+public class NemLetezoAruKivetel extends BoltKivetel {
 
 	public NemLetezoAruKivetel(String message) {
 
