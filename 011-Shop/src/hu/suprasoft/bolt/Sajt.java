@@ -7,16 +7,14 @@ import java.util.Date;
  *
  */
 
-public class Sajt {
+public class Sajt extends Elelmiszer {
 
 	double suly;
 	double zsirtartalom;
-	Long vonalKod;
-	String gyarto;
-	Date szavatossagiIdo;
 
 	public Sajt(Long vonalKod, double suly, String gyarto, Date szavatossagiIdo, double zsirtartalom) {
 
+		super(vonalKod, gyarto, szavatossagiIdo);
 		this.vonalKod = vonalKod;
 		this.suly = suly;
 		this.gyarto = gyarto;
@@ -38,19 +36,23 @@ public class Sajt {
 				+ "\nZsírtartalom: " + getZsirtartalom();
 	}
 
+	@Override
 	public boolean joMeg() {
 		Date today = new Date();
 		return today.before(szavatossagiIdo);
 	}
 
+	@Override
 	public Date getSzavatossagiIdo() {
 		return szavatossagiIdo;
 	}
 
+	@Override
 	public Long getVonalKod() {
 		return vonalKod;
 	}
 
+	@Override
 	public String getGyarto() {
 		return gyarto;
 	}

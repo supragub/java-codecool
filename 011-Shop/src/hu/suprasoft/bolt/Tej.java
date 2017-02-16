@@ -7,13 +7,10 @@ import java.util.Date;
  *
  */
 
-public abstract class Tej {
+public abstract class Tej extends Elelmiszer {
 
 	protected int urtartalom;
-	protected String gyarto;
-	protected Date szavatossagiIdo;
 	protected double zsirtartalom;
-	protected long vonalKod;
 
 	public final int LITER = 10;
 	public final int FELLITER = 5;
@@ -23,6 +20,7 @@ public abstract class Tej {
 
 	public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirtartalom) {
 
+		super(vonalKod, gyarto, szavatossagiIdo);
 		this.vonalKod = vonalKod;
 		this.urtartalom = urtartalom;
 		this.gyarto = gyarto;
@@ -30,10 +28,12 @@ public abstract class Tej {
 		this.zsirtartalom = zsirtartalom;
 	}
 
-	public long getVonalKod() {
+	@Override
+	public Long getVonalKod() {
 		return vonalKod;
 	}
 
+	@Override
 	public boolean joMeg() {
 		Date today = new Date();
 		return today.before(szavatossagiIdo);
@@ -43,10 +43,12 @@ public abstract class Tej {
 		return urtartalom;
 	}
 
+	@Override
 	public String getGyarto() {
 		return gyarto;
 	}
 
+	@Override
 	public Date getSzavatossagiIdo() {
 		return szavatossagiIdo;
 	}
